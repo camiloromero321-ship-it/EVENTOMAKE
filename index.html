@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Premium: Bruder x Make</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0f0f0f',
+                            gray: '#1a1a1a',
+                            light: '#f4f4f4'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #f4f4f4;
+        }
+        .text-gold {
+            color: #D4AF37;
+        }
+        .bg-gold {
+            background-color: #D4AF37;
+        }
+        .border-gold {
+            border-color: #D4AF37;
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(15,15,15,0.9) 90%, #0f0f0f 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo-text {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <!-- Hero Section con Imagen del Local -->
+    <section class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://www.bruder.com.co/wp-content/uploads/bruder-cerveceria-pubs-bogota.jpg" alt="Bruder Venue" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite]">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+
+        <!-- Header Logos (Logo Bruder Grande) -->
+        <div class="absolute top-0 left-0 w-full p-8 md:p-12 z-20 flex justify-between items-start">
+            <img class="h-20 md:h-28 w-auto opacity-100 drop-shadow-2xl" src="https://www.bruder.com.co/wp-content/uploads/bruder-cerveceria-logo-w.png" alt="Bruder">
+            <div class="flex flex-col items-end">
+                <span class="text-[10px] tracking-[0.3em] text-gold uppercase mb-3 opacity-90">Propuesta Exclusiva Para</span>
+                <img class="h-16 md:h-20 w-auto filter invert opacity-100 drop-shadow-lg" src="https://cdn.worldvectorlogo.com/logos/make-logo-rgb-3.svg" alt="Make">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20">
+            <div class="mb-6 inline-block">
+                <span class="py-1 px-3 border border-white/20 rounded-full text-xs tracking-[0.3em] uppercase text-gray-300 bg-black/30 backdrop-blur-sm">Evento Corporativo Premium</span>
+            </div>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight">
+                El Arte de <span class="italic text-gold">Conectar</span>
+            </h1>
+            
+            <!-- Introduction Text -->
+            <div class="max-w-3xl mx-auto mb-10">
+                <p class="text-lg md:text-xl text-gray-200 font-light tracking-wide leading-relaxed">
+                    Nuestro pub en Bogotá cuenta con una opción gastronómica innovadora y única en el sector: <span class="text-gold font-normal">Cocina Artesanal</span>. Una selección de platos con sabores e ingredientes únicos que maridan perfectamente con nuestras cervezas.
+                </p>
+                <div class="mt-6 flex items-center justify-center gap-2 text-gold/80 text-sm tracking-[0.2em] uppercase">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>Calle 83 # 12 A 11</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#reserva" class="group relative px-8 py-4 bg-gold text-brand-dark font-bold text-sm tracking-widest uppercase overflow-hidden transition-all hover:bg-white">
+                    <span class="relative z-10">Ver Propuesta</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white/50"></i>
+        </div>
+    </section>
+
+    <!-- La Experiencia -->
+    <section id="experiencia" class="py-32 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div class="order-2 md:order-1">
+                    <h2 class="font-serif text-4xl md:text-5xl text-white mb-8">
+                        Sabores de <span class="text-gold italic">Autor</span>
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed mb-6 font-light text-lg">
+                        Cada detalle de nuestra carta está pensado para maridar a la perfección con el networking de alto nivel. Ofrecemos una experiencia sensorial completa.
+                    </p>
+                    <ul class="space-y-6 mt-10">
+                        <li class="flex items-start group">
+                            <span class="h-px w-8 bg-gold mt-3 mr-4 transition-all group-hover:w-16"></span>
+                            <div>
+                                <h4 class="text-white text-lg font-serif">Cerveza Artesanal Premium</h4>
+                                <p class="text-sm text-gray-500 mt-1">Selección exclusiva de nuestros maestros cerveceros.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <span class="h-px w-8 bg-gold mt-3 mr-4 transition-all group-hover:w-16"></span>
+                            <div>
+                                <h4 class="text-white text-lg font-serif">Gastronomía Gourmet</h4>
+                                <p class="text-sm text-gray-500 mt-1">Mini burgers de autor y opciones veganas sofisticadas.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Images Grid -->
+                <div class="order-1 md:order-2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4 mt-8">
+                        <img src="https://www.bruder.com.co/wp-content/uploads/bruder-cerveceria-pubs-tunja.jpg" alt="Ambiente y Producto" class="w-full h-64 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-2xl">
+                        <div class="p-4 glass-panel text-center">
+                            <span class="text-gold text-2xl font-serif block">4.9</span>
+                            <span class="text-[10px] uppercase tracking-widest text-gray-400">Calificación Promedio</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm flex justify-center items-center">
+                            <img src="https://www.bruder.com.co/wp-content/uploads/bruder-cerveceria-premios-monde-selection.png" alt="Monde Selection" class="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxOdaKe0ImvUHuUrGm_kgjhoP6o_QrqK0sO9RWnY-B97oyFtOp7QtkNYdEnLwOxyPNopJwF3VgBGP-joxbAuWr6VCpXb9RXR5ZEfk2YFFmcHVWsm9fJfuoXE30NOH3btVaRXQjZgoc-dxc=s1360-w1360-h1020-rw" alt="Detalle Producto" class="w-full h-80 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Galería del Local -->
+    <section class="py-24 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs font-bold tracking-[0.2em] uppercase">Atmósfera</span>
+                <h2 class="font-serif text-4xl text-white mt-4">Nuestras Instalaciones</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="group relative overflow-hidden h-96 rounded-sm">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxdt5XgwWlcmprAubUy0TLgyHRVWQV85BGogqMSiXAOI11wYtnSXWcG9LMLDyU__HIHZN5nVVPRF-CVsx_w1r0Q5MV0AUajsgGL8odhMF8oPyn2REmnQOQohbw0qoL0v6jCFHzBTg=s1360-w1360-h1020-rw" alt="Interior Pub" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <p class="text-white font-serif text-xl">Arquitectura</p>
+                    </div>
+                </div>
+                
+                <!-- Foto 2 -->
+                <div class="group relative overflow-hidden h-96 rounded-sm">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxhmWe9Q24mMreS5n7Ky2FnW4aM4CKrqZXN6CvXo_DvkCAwIyhG-w4j5_w3mHDQ0V075L1eBJ6DcwXDgmZP7OyZO-5mJuVOPVhSdrV9AtdSSslAQbjOv7-MynCQv1jYeJ39V04=s1360-w1360-h1020-rw" alt="Ambiente Social" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <p class="text-white font-serif text-xl">Ambiente Social</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="group relative overflow-hidden h-96 rounded-sm">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx1I9vvOWdIQStJ0UScpsVh-1yQtth8w4v8a13_eJq4xhVeY4Mwtbph_C8l3oUaUq1pmuSMsqZ41lbVZuCAXcpLFdid6NPLFKdxElFC7CUQWXdU0rsMgiLRbEqCnTSYlHVKYBt6=s1360-w1360-h1020-rw" alt="Detalles Premium" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <p class="text-white font-serif text-xl">Detalles Premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities / Espacios -->
+    <section id="espacios" class="py-24 bg-brand-gray border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 hover:bg-white/5 transition duration-500 border border-transparent hover:border-white/10 group">
+                    <i data-lucide="monitor" class="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-serif text-white mb-3">Branding Inmersivo</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">6 pantallas de alta definición distribuidas estratégicamente para proyectar la identidad de Make en todo momento.</p>
+                </div>
+                <div class="p-8 hover:bg-white/5 transition duration-500 border border-transparent hover:border-white/10 group">
+                    <i data-lucide="mic-2" class="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-serif text-white mb-3">Audio Profesional</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Sistema de sonido de alta fidelidad para ambientación musical o amplificación de voz durante presentaciones.</p>
+                </div>
+                <div class="p-8 hover:bg-white/5 transition duration-500 border border-transparent hover:border-white/10 group">
+                    <i data-lucide="shield" class="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-serif text-white mb-3">Privacidad Garantizada</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Zonas exclusivas con control de acceso, permitiendo el uso de material POP y rompetráficos sin interferencias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (Inversion) -->
+    <section id="reserva" class="py-32 relative bg-black overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-gray to-transparent opacity-20"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row shadow-2xl bg-brand-gray border border-white/5">
+                
+                <!-- Left: Pricing -->
+                <div class="md:w-3/5 p-12 md:p-16 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                    
+                    <h3 class="text-gold text-sm tracking-[0.3em] uppercase mb-2">Inversión por Asistente</h3>
+                    <div class="flex items-baseline mb-8">
+                        <span class="font-serif text-7xl text-white">$25</span>
+                        <span class="text-xl text-gray-400 ml-2 font-light">USD</span>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <span class="text-2xl font-serif text-gold">01</span>
+                            <div>
+                                <h4 class="text-white text-lg uppercase tracking-wider mb-2">Bebidas Premium</h4>
+                                <p class="text-gray-400 font-light text-sm">2 unidades por persona. Elección entre Cerveza Artesanal de la casa o Bebidas sin alcohol.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="text-2xl font-serif text-gold">02</span>
+                            <div>
+                                <h4 class="text-white text-lg uppercase tracking-wider mb-2">Menú Gourmet</h4>
+                                <p class="text-gray-400 font-light text-sm">Plato fuerte: Mini Burger de autor o especialidad Vegana. Incluye snack de acompañamiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Venue Logic -->
+                <div class="md:w-2/5 bg-gold p-12 md:p-16 flex flex-col justify-center text-brand-dark relative">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    
+                    <h3 class="font-serif text-3xl mb-8 relative z-10">Condiciones del Venue</h3>
+                    
+                    <div class="space-y-8 relative z-10">
+                        <div class="border-b border-black/10 pb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold text-sm uppercase tracking-wide">Más de 50 Personas</span>
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <!-- Updated Text: INCLUIDO instead of GRATIS -->
+                            <p class="text-4xl font-serif mt-2 tracking-tight">INCLUIDO</p>
+                            <p class="text-sm mt-1 opacity-70">Costo de alquiler del local bonificado.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold text-sm uppercase tracking-wide">Menos de 50 Personas</span>
+                            </div>
+                            <p class="text-4xl font-serif mt-2">$250 USD</p>
+                            <p class="text-sm mt-1 opacity-70">Tarifa fija por exclusividad.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Aliados Estratégicos (Casos de Éxito) -->
+    <section class="py-20 bg-brand-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-xs tracking-[0.3em] uppercase mb-12">Aliados estratégicos y eventos realizados</p>
+            <div class="flex flex-wrap justify-center gap-12 md:gap-20 items-center opacity-40 hover:opacity-80 transition-opacity duration-500">
+                <!-- Text Logos styled to look premium -->
+                <span class="logo-text text-2xl md:text-3xl text-white">SOLANA</span>
+                <span class="logo-text text-2xl md:text-3xl text-white font-serif italic">Binance</span>
+                <span class="logo-text text-2xl md:text-3xl text-white font-bold">FIFA</span>
+                <span class="logo-text text-2xl md:text-3xl text-white tracking-widest">AVALANCHE</span>
+                <span class="logo-text text-2xl md:text-3xl text-white font-light">Algorand</span>
+                <span class="logo-text text-2xl md:text-3xl text-white">Stellar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-black py-20 border-t border-white/5 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-4xl text-white mb-6">¿Listo para elevar el estándar?</h2>
+            <p class="text-gray-400 font-light mb-10 text-lg">
+                La Zona T espera por Make. Reservemos la fecha y creemos una experiencia inolvidable.
+            </p>
+            
+            <form class="max-w-md mx-auto space-y-4 text-left bg-brand-gray/50 p-8 border border-white/5">
+                <div>
+                    <label class="block text-gold text-xs tracking-widest uppercase mb-2">Asistentes Estimados</label>
+                    <select class="w-full bg-black border border-white/10 text-white px-4 py-3 focus:outline-none focus:border-gold transition font-light">
+                        <option>Más de 50 (Venue Incluido)</option>
+                        <option>Menos de 50 (+$250 USD Venue)</option>
+                    </select>
+                </div>
+                <button class="w-full bg-white text-black font-bold py-4 hover:bg-gold transition duration-300 uppercase tracking-[0.2em] text-xs">
+                    Solicitar Reserva
+                </button>
+            </form>
+            
+            <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6 opacity-40 hover:opacity-100 transition duration-500">
+                <img class="h-6" src="https://www.bruder.com.co/wp-content/uploads/bruder-cerveceria-logo-w.png" alt="Bruder">
+                <span class="text-white text-xl font-light">×</span>
+                <img class="h-5 filter invert opacity-80" src="https://cdn.worldvectorlogo.com/logos/make-logo-rgb-3.svg" alt="Make">
+            </div>
+            <p class="mt-6 text-xs text-gray-600 tracking-widest">© 2024 BRUDER CERVECERÍA. BOGOTÁ, COLOMBIA.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Check if the element exists before scrolling
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
